@@ -76,6 +76,8 @@ source venv/bin/activate
 4. Instale as depêndencias
 
 ```bash
+cd backend/app
+
 python3 -m pip install -r requirements.txt
 ```
 
@@ -87,7 +89,7 @@ uv pip install -r requirements.txt
 
 
 
-5. Inicie o backend (**Em outro terminal**)
+5. Inicie o backend
 
 ```bash
 cd backend
