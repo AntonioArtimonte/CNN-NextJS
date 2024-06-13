@@ -21,24 +21,22 @@ Este projeto permite o upload de imagens para a predição utilizando dois model
 
 ## Estrutura do Projeto
 
-- `src/main.py`: Arquivo principal que contém a aplicação Flask.
-- `src/templates/index.html`: Página HTML para upload de imagens e exibição dos resultados.
-- `src/models/modelo_mnist.h5`: Arquivo do modelo LeNet-5 treinado.
-- `src/models/linear_modelo_mnist.h5`: Arquivo do modelo linear treinado.
+- `/app`: Arquivo que contem a aplicação NextJS -> Frontend
+- `app/components`: Componenentes utilizads na aplicação React.
+- `backend/app/api/endpoints`: Endpoints da aplicação.
+- `backend/app/models/models/linear_modelo_mnist.h5`: Arquivo do modelo linear treinado.
+- `backend/app/models/models/modelo_mnist.h5`: Arquivo do modelo LeNet-5 treinado.
 
 ## Pré-requisitos
 
 Certifique-se de ter os seguintes pacotes instalados:
 
-- Flask
-- TensorFlow
-- PIL (Python Imaging Library)
-- NumPy
+- Python3.11
 
-Você pode instalar os pacotes necessários usando o seguinte comando:
+Você pode instalar os pacotes necessários usando o seguinte comando (no MacOS, para outro S.O cheque a documentação própria do python):
 
 ```bash
-pip install -r requirements.txt
+brew install python@3.11
 ```
 
 ## Executando o projeto
@@ -97,6 +95,22 @@ cd backend
 python3 -m uvicorn app.main:app --reload
 ```
 
+## Executando com o Docker
+
+Caso tenha o docker instalado em sua máquina, também é possível executar o projeto através do mesmo através do seguinte tutorial:
+
+Buildar o docker
+
+```bash
+docker-compose up --build
+```
+
+Se não rodar automaticamente execute o seguinte
+
+```bash
+docker-compose up
+```
+
 ## Uso
 
 1. Na página inicial, faça o upload de uma imagem com algum algarismo.
@@ -147,8 +161,6 @@ Ambos foram utilizados do jeito que estão em um arquivo `.py`, afim de diminuir
 ## Vídeo
 
 Para saber melhor como a aplicação funciona, segue um vídeo abaixo demonstrando o uso da mesma
-
-OBS: Se o vídeo não abrir, pode baixar o arquivo do mesmo em sua máquina clicando [aqui](IMG_1165.MOV)
 
 [Vídeo](https://drive.google.com/file/d/1ZM9rvCJfrFtXAPLuabt0bCnwKUOQW5kq/view?usp=sharing)
 

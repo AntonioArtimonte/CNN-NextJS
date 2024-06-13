@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+    environment:
+      - ENV=development
+
+  frontend:
+    build:
+      context: ./app
+    ports:
+      - "3000:3000"
+    environment:
+      - ENV=development
+    command: ["npm", "start"]
